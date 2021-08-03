@@ -17,6 +17,7 @@ public class CityControllerDataIntegrityIT {
 	@Autowired
 	private MockMvc mockMvc;
 	
+	
 	@Test
 	public void deleteShouldReturnBadRequestWhenDependentId() throws Exception {		
 

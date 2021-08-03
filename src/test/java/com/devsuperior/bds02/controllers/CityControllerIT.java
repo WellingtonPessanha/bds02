@@ -18,9 +18,11 @@ import org.springframework.transaction.annotation.Transactional;
 @AutoConfigureMockMvc
 @Transactional
 public class CityControllerIT {
+	
 
 	@Autowired
 	private MockMvc mockMvc;
+	
 	
 	@Test
 	public void deleteShouldReturnNoContentWhenIndependentId() throws Exception {		

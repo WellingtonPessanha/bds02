@@ -26,15 +26,18 @@ public class EventControllerIT {
 	@Autowired
 	private MockMvc mockMvc;
 	
+	
 	@Autowired
-	private ObjectMapper objectMapper;
+	private ObjectMapper objectMapper;	
+	
+	
 	
 	@Test
 	public void updateShouldUpdateResourceWhenIdExists() throws Exception {
 
 		long existingId = 1L;
 		
-		EventDTO dto = new EventDTO(null, "Expo XP", LocalDate.of(2021, 5, 18), "https://expoxp.com.br", 7L);
+		EventDTO dto = new EventDTO(1L, "Expo XP", LocalDate.of(2021, 5, 18), "https://expoxp.com.br", 7L);
 		String jsonBody = objectMapper.writeValueAsString(dto);
 		
 		ResultActions result =
